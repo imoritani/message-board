@@ -11,15 +11,25 @@
  </div>
 </div>
 
-<%= form_for(@message) do |f| %>
- <div class="form-group form-inline">
-  <%= f.label "名前: ", for: "nameLabel" %>
-  <%= f.text_area :name , id: "nameLabel", rows: 1, class: "form-control" %>
+<%= form_for(@message, html: {class: "form-horizontal"}) do |f| %>
+  <div class="form-group">
+   <%= f.label "名前: ", for: "nameLabel", class: "col-sm-1 control-label" %>
+   <div class="col-sm-11">
+    <%= f.text_field :name , id: "nameLabel", class: "form-control" %>
+   </div>
+  </div>
  
-  <%= f.label "内容: ", for: "contentLabel" %>
-  <%= f.text_area :body, id: "contentLabel", rows: 1, class: "form-control" %>
+  <div class="form-group">
+   <%= f.label "内容: ", for: "contentLabel", class: "control-label col-sm-1" %>
+   <div class="col-sm-11">
+    <%= f.text_area :body, id: "contentLabel", class: "form-control" %>
+   </div>
+  </div>
 
-  <%= f.submit class: "btn btn-sm btn-primary" %>
+ <div class="form-group">
+  <div class="col-sm-offset-1 col-sm-11">
+   <%= f.submit class: "btn btn-sm btn-primary" %>
+  </div>
  </div>
- 
  <% end %>
+ 
