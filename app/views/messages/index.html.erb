@@ -6,9 +6,12 @@
   <% @messages.each do |msg| %>
   <span class="label label-info"><%= msg.name %></span>
   <%= msg.body %>
+  (<%= link_to "edit", edit_message_path(msg) %>)
+  (<%= link_to "destroy", msg, method: :delete, data: {confirm: "is this really destroy?"} %>)
   <br>
   <% end %>
  </div>
 </div>
-]
+
 <%= render 'form' %>
+
