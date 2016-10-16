@@ -12,9 +12,14 @@
 </div>
 
 <%= form_for(@message) do |f| %>
-名前: 
- <%= f.text_field :name%>
-内容:
- <%= f.text_field :body%>
- <%= f.submit%>
+ <div class="form-group form-inline">
+  <%= f.label "名前: ", for: "nameLabel" %>
+  <%= f.text_area :name , id: "nameLabel", rows: 1, class: "form-control" %>
+ 
+  <%= f.label "内容: ", for: "contentLabel" %>
+  <%= f.text_area :body, id: "contentLabel", rows: 1, class: "form-control" %>
+
+  <%= f.submit class: "btn btn-sm btn-primary" %>
+ </div>
+ 
  <% end %>
