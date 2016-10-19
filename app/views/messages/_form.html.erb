@@ -12,25 +12,26 @@
   </div>
  <% end %>
 
-<div class="container">
   <div class="form-group">
-   <span class="glyphicon glyphicon glyphicon-user col-sm-1" aria-hidden="true"></span>
    <%= f.label "名前: ", for: "nameLabel", class: "col-sm-1 control-label" %>
-    <div class="col-sm-4">
-     <%= f.text_field :name , id: "nameLabel", class: "form-control" %>
-    </div>
-    <%= f.label "年齢: ", for: "ageLabel", class: "control-label col-sm-1" %>
-    <div class="col-sm-2">
-     <%= f.text_field :age, id: "ageLabel", class: "form-control" %>
-    </div>
-  </div>
-
-   <div class="form-group">
-    <%= f.label "内容: ", for: "contentLabel", class: "control-label col-sm-2" %>
-    <div class="col-sm-4">
-     <%= f.text_area :body, id: "contentLabel", class: "form-control" %>
-    </div>
+   <div class="col-sm-11">
+    <%= f.text_field :name , id: "nameLabel", class: "form-control" %>
    </div>
+  </div>
+ 
+  <div class="form-group">
+   <%= f.label "内容: ", for: "contentLabel", class: "control-label col-sm-1" %>
+   <div class="col-sm-11">
+    <%= f.text_area :body, id: "contentLabel", class: "form-control" %>
+   </div>
+  </div>
+  
+  <div class="form-group">
+   <%= f.label "年齢: ", for: "ageLabel", class: "control-label col-sm-1" %>
+   <div class="col-sm-11">
+    <%= f.text_field :age, id: "ageLabel", class: "form-control" %>
+   </div>
+  </div>
   
 
  <div class="form-group">
@@ -38,6 +39,4 @@
    <%= f.submit class: "btn btn-sm btn-primary" %>
   </div>
  </div>
-</div>
-
  <% end %>
